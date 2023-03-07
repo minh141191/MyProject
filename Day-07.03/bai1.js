@@ -1,0 +1,10 @@
+inputBiology = prompt("Enter the biology");
+inputPhysics = prompt("Enter the physics");
+inputChemistry = prompt("Enter the chemistry");
+let biology = parseInt(inputBiology);
+let physics = parseInt(inputPhysics);
+let chemistry = parseInt(inputChemistry);
+let total = biology + physics + chemistry;
+let average = (biology + physics + chemistry)/3;
+document.write("Điểm tổng:" + total);
+document.write("Điểm trung bình:" + average);
