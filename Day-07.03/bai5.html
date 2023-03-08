@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyển đổi tiền tệ</title>
+  <script src="bai5.js"></script>
+</head>
+<body>
+  <form>
+    <table>
+      <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+        <th></th>
+      </tr>
+      <tr>
+        <td><input id="money" type="text" name="money"></td>
+        <td>
+          <select id="fromCurrency">
+            <option value="usd">USD</option>
+            <option value="vnd">VND</option>
+          </select>
+        </td>
+        <td>
+          <select id="toCurrency">
+            <option value="usd">USD</option>
+            <option value="vnd">VND</option>
+          </select>
+        </td>
+        <td>
+          <button type="button" onclick="doiTien();">Convert</button>
+        </td>
+      </tr>
+    </table>
+    <span>Result: </span> <span id="result"></span>
+  </form>
+</body>
+</html>
