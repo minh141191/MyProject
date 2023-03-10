@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Tính giá điện</title>
 </head>
 <body>
-$END$
+  <input id="kWh" type="text">
+  <button type="button" onclick="tinhTien();">Tính</button><br/>
+  <span id="sotien"></span>
 </body>
+<script>
+  function tinhTien() {
+      let kWh = +document.getElementById("kWh").value;
+      const money1 = 50 * 1.678;
+      const money2 = money1 + (kWh - 50) * 1.734;
+      const money3 = money2 + (kWh - 100) * 2.014;
+      const money4 = money3 + ( kWh - 200) * 2.536;
+      const money5 = money4 + ( kWh - 300) * 2.834;
+      const money6 = money5 + (kWh -400) * 2927;
+      if (0 < kWh && kWh <= 50) {
+          document.getElementById("sotien").innerHTML = " Số Tiền:" +money1 + " Đồng";
+      } else if (50 < kWh && kWh <= 100) {
+          document.getElementById("sotien").innerHTML = " Số Tiền:" +money2+ " Đồng";
+      } else if (100 < kWh && kWh <= 200) {
+          document.getElementById("sotien").innerHTML = " Số Tiền:" +money3 + "Đồng";
+      } else if( 200 < kWh && kWh <= 300 ) {
+          document.getElementById( "sotien").innerHTML = " Số Tiền:" +money4+ "Đồng";
+      } else if ( 300 < kWh && kWh <= 400){
+          document.getElementById("sotien").innerHTML = "Số Tiền:" +money5+ "Đồng";
+      } else if (kWh > 400) {
+          document.getElementById("sotien").innerHTML = "Số Tiền:" +money6 + "Đồng";
+      } else
+          document.write("nhập sai");
+  }
+</script>
 </html>

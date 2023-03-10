@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<h1> Chu vi và diện tích hình vuông</h1>
+    <input id="canha" type="number">
+    <button type="button" onclick="hinhVuong();">Kiểm tra</button><br/><br/>
+    <span id="result"></span><br/>
+    <span id="result1"></span>
 </body>
+<script>
+    function hinhVuong() {
+        let canha = +document.getElementById("canha").value;
+        let result = canha * 4;
+        let result1 = Math.pow(canha, 2);
+        if(canha === 0) {
+            document.write("Nhập Sai")
+        }
+        else {
+            document.getElementById("result").innerHTML = "Chu vi:" + result;
+            document.getElementById("result1").innerHTML = "Diện tích:" + result1;
+        }
+    }
+</script>
 </html>
