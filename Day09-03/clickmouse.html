@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Even click mouse</title>
+    <style>
+        img {padding-left: 400px;}
+    </style>
+</head>
+<body>
+    <form>
+   <img id="myImages" src="../quabong.png" alt="position:absolute;left:0; top:0;" height="130" width="216"/><br><br>
+    <input type="button" value="Right" onclick="moveRight();"/>
+    <input type="button" value="Left" onclick="moveLeft();"/>
+    <input type="button" value="Up" onclick="moveUp();"/>
+    <input type="button" value="Down" onclick="moveDown();"/>
+</form>
+</body>
+<script>
+   let imgObj = null;//Tạo biến imgObj để lưu ảnh
+   imgObj = document.getElementById("myImages");//sử dụng hàm getElementById() để nhận được một đối tượng DOM bà sau đó gán nó cho biến imgObj
+   function init() {
+       imgObj = document.getElementById("myImages");
+       imgObj.style.position = 'relative';
+       imgObj.style.left = '0px';
+   }
+   function moveRight() {
+       imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';// Tạo hàm moveRight để tăng khoảng cách trái 10 pixel
+   }
+   function moveLeft() {
+       imgObj.style.left = parseInt(imgObj.style.left) - 10 + 'px';
+   }
+   function moveUp() {
+       imgObj.style.top = parseInt(imgObj.style.top) - 10 + 'px';
+   }
+   function moveDown() {
+       imgObj.style.top = parseInt(imgObj.style.top) + 10 + 'px';
+   }
+   window.onload = init ;
+</script>
+</html>

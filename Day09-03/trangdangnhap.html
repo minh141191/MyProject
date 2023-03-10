@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>trang dang nhap</title>
+</head>
+<body>
+<form>
+  <table>
+    <tr>
+      <th>use name:</th>
+      <td><input id="useName" type="text"></td>
+    </tr>
+    <tr>
+      <th>pass word:</th>
+      <td><input id="passWord" type="password" ></td>
+    </tr>
+    <tr>
+      <td><button type="button" onclick="login();"> Login </button></td>
+    </tr>
+  </table>
+</form>
+</body>
+<script>
+function login() {
+  let username = document.getElementById("useName").value;
+  let password = document.getElementById("passWord").value;
+  if (username==="admin" && password==="123") {
+    alert("Đăng nhập tài khoản admin")
+  } else if(username==="user" && password==="123") {
+    alert("Đăng nhập tài khoản user")
+  } else {
+    alert("Tài khoản không tồn tại")
+  }
+}
+</script>
+</html>

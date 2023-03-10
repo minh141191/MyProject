@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>cac phep tinh</title>
+</head>
+<body>
+    <input id="numbera" type="number" placeholder="nhập a"/>
+    <input id="numberb" type="number" placeholder="nhập b"/>
+    <button type="button" onclick="Tinh();">Tính</button>
+    <br/>
+    <span id="result" ></span><br/>
+    <span id="result1"></span><br/>
+    <span id="result2"></span><br/>
+    <span id="result3"></span><br/>
+    <span id="result4"></span><br/>
+    <span id="result5"></span><br/>
+</body>
+<script>
+    function Tinh() {
+        let numbera = +document.getElementById("numbera").value;
+        let numberb = +document.getElementById("numberb").value;
+        let result = numbera + numberb;
+        let resul1 = numbera - numberb;
+        let result2 = numbera / numberb;
+        let result3 = numbera * numberb;
+        let result4 = numbera % numberb;
+        let result5 = (numbera * numbera) * (numberb * numberb);
+        if (numberb === 0) {
+            document.write(" Nhập Sai");
+        } else {
+           document.getElementById("result").innerHTML = numbera + " + " + numberb + " = " + result;
+           document.getElementById("result1").innerHTML = numbera + " - " + numberb + " = " + resul1;
+           document.getElementById("result2").innerHTML = numbera + " / " + numberb + " = " + result2;
+           document.getElementById("result3").innerHTML = numbera + " * " +numberb + " = " + result3;
+           document.getElementById("result4").innerHTML = numbera + " % " + numberb + " = " + result4;
+           document.getElementById("result5").innerHTML = numbera + " <sup> " + 2 + " </sup> * " + numberb + " <sup> " + 2 + " </sup> =" + result5;
+        }
+    }
+</script>
+</html>

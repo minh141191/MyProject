@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính Luỹ Thừa</h1>
+
+<input id="aaa" type="text">
+<input id="bbb" type="text">
+<button id="luythua" onclick="myFunction()">Run</button>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+
+
+<script>
+  function myFunction() {
+    let aaa = document.getElementById("aaa").value;
+    let bbb = document.getElementById("bbb").value;
+    if (aaa !== 0 && bbb !== 0) {
+        let result = Math.pow(aaa, bbb);
+        let result2 = Math.pow(aaa, 2);
+        document.getElementById("demo").innerHTML = aaa + "<sup>" + bbb + "</sup> = " + result;
+        document.getElementById("demo1").innerHTML = aaa + "<sup>" + 2 + "</sup> = " +result2;
+    }
+  }
+</script>
+</body>
+</html>
