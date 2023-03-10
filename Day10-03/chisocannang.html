@@ -7,17 +7,23 @@
 <body>
     <h3>Tính chỉ số cân nặng</h3>
     Cân năng (kg):<input id="weight" type="text"><br/>
-    Chiều cao (m):<input id="height" type="text">
-    <button type="button" onclick="chiSo();">Kiểm tra</button>
+    Chiều cao (m):<input id="height" type="text"><br/>
+    <button type="button" onclick="chiSo();">Check!</button><br/>
+    <span id="display"></span>
 </body>
 <script>
     function chiSo() {
-        let weightKg = +document.getElementById("weight").value;
-        let heightM = +document.getElementById("height").value;
-        let bmi = weightKg / heightM;
-        if(bmi < 18) {
-
-        }
+        let weight = +document.getElementById("weight").value;
+        let height = +document.getElementById("height").value;
+        let bmi = weight / Math.pow(height,2);
+        if( bmi < 18) {
+            document.getElementById("display").innerHTML = "chỉ số BMI là:" + bmi + "Underweight";
+        }else if(bmi < 25.0) {
+            document.getElementById("display").innerHTML = "chỉ số BMI là:" + bmi + "Normal";
+        }else if(bmi < 30.0) {
+            document.getElementById("display").innerHTML = "chỉ số BMI là:" + bmi + "Overweight";
+        }else
+            document.write("Obese");
     }
 </script>
 </html>
