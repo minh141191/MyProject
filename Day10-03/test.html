@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+  <input type="text" id="result">
+  <button type="submit" onclick="testAdd(this.value);" value="1">1</button>
+  <button type="submit" onclick="testAdd(this.value);" value="+">+</button>
+  <button type="submit" onclick="testAdd(this.value);" value="2">2</button>
+  <button type="submit" onclick="testAdd(this.value);" value="2">=</button>
+</p>
+</body>
+<script>
+  function testAdd(val) {
+      document.getElementById("result").value =val;
+  }
+</script>
+</html>
