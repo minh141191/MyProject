@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Even click mouse</title>
-    <style>
-        img {padding-left: 400px;}
-    </style>
+<!--    <style>-->
+<!--        img {padding-left: 400px;}-->
+<!--    </style>-->
 </head>
 <body>
     <form>
@@ -18,11 +18,12 @@
 </body>
 <script>
    let imgObj = null;//Tạo biến imgObj để lưu ảnh
-   imgObj = document.getElementById("myImages");//sử dụng hàm getElementById() để nhận được một đối tượng DOM bà sau đó gán nó cho biến imgObj
+   imgObj = document.getElementById("myImages");//sử dụng hàm getElementById() để nhận được một đối tượng DOM và sau đó gán nó cho biến imgObj
    function init() {
        imgObj = document.getElementById("myImages");
        imgObj.style.position = 'relative';
        imgObj.style.left = '0px';
+       imgObj.style.top = '0px';
    }
    function moveRight() {
        imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';// Tạo hàm moveRight để tăng khoảng cách trái 10 pixel

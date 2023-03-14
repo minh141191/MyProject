@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Tính học lực</title>
 </head>
 <body>
-$END$
+<script>
+    inputDiema = +prompt("điểm giữa kì");
+    inputDiemb = +prompt("điểm cuối kì");
+    let ab = (inputDiema + inputDiemb)/ 2
+    if (0< ab && ab <5) {
+        alert("Học lực: Kém");
+    } else if(5 <= ab && ab < 7) {
+        alert("Học lực: Trung bình");
+    } else if(7 <= ab && ab < 9) {
+        alert("Học lực: Khá");
+    } else if(9 <= ab && ab  <= 10) {
+        alert("Học lực: Tốt");
+    } else
+        alert("nhập sai điểm");
+</script>
 </body>
 </html>

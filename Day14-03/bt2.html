@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let doC = "";
+    do {
+    doC = +prompt("nhập nhiệt độ ");
+
+        if (doC < 20) {
+            alert("yêu cầu người dùng tăng nhiệt độ");
+        } else if(doC >100) {
+            alert("yêu cầu người dùng hạ nhiệt độ");
+        }else
+            alert("nhiệt độ bình thường");
+    } while (doC < 20 || doC > 100);
+</script>
+</body>
+</html>

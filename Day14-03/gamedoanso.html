@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="doanSo();">Start Game</button>
+</body>
+<script>
+  function doanSo() {
+    let number = +prompt("số bạn muốn đoán trong khoảng");
+    let number_run = Math.floor(Math.random() * number);
+    console.log(number_run);
+    let number_check = +prompt("nhập số bạn đoán");
+    for (count=1; count<4; count++) {
+      if(number_check===number_run){
+          alert("Chúc mừng bạn đã đoán đúng!!!");
+          break;
+      }else if(number_check > number_run){
+          alert("số bạn đoán lớn hơn");
+      }else
+          alert("số bạn đoán nhỏ hơn");
+        number_check = prompt("nhập số bạn đoán");
+    if(count===4) {
+        alert("Game Over!");
+      }
+    }
+  }
+</script>
+</html>
