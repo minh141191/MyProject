@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra SNT</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    function isPrime(number) {
+        let num = "";
+        for (i = 2; i <= number; i++) {
+            if(number === i) {
+                num += "Là số nguyên tố";
+                break;
+            }if(number % i === 0) {
+                num += "Không phải là số nguyên tố";
+                break;
+            }
+        }return num;
+    }
+    let num1 = +prompt("nhập số cần check");
+    document.getElementById("result").innerHTML = isPrime(num1);
+</script>
+</body>
+</html>

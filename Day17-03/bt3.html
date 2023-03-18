@@ -6,24 +6,21 @@
 </head>
 <body>
 <script>
-let arr = prompt("nhập phần tử mạng");
-console.log(arr);
-arr = arr.split(",");
-let count = 0;
-let sum = 0;
-for (let i = 0; i < arr.length; i ++) {
-    if(arr[i] >1) {
-        for (let j = 1; j < arr[i]; j ++) {
-            if(arr[i] % j ===0) {
-                count++
+    let arr = [2,4,5,6,7]
+    let total = 0;
+    for (let i = 0; i < arr.length; i++) {
+        let snt = arr[i];
+        for (let i = 2; i <= snt; i++) {
+            if (i === snt) {
+                total += snt;
+                break;
             }
-        } if(count === 2) {
-            sum += +arr[i];
+            if (snt % i === 0) {
+                break;
+            }
         }
-        count = 0;
     }
-}document.write(sum);
-
+    document.write(total);
 </script>
 </body>
 </html>

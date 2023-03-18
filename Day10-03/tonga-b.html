@@ -5,19 +5,14 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Tính tổng từ a đến b</h1>
-<input id="a" type="number">
-<input id="b" type="number">
-<button id="demo" onclick="tinhTong();">Tính</button>
-<span id="result"></span>
 </body>
 <script>
-    function tinhTong() {
-        let a = +document.getElementById("nhap a").value;
-        let b = +document.getElementById("nhap b").value;
-        let tong = a + b;
-        if ( a > b ) {
-        }
-    }
+    let a = parseInt(prompt("nhập a"));
+    let b = parseInt(prompt("nhập b"));
+    let total = 0;
+    for (i = a; i <=b; i++) {
+        total += i;
+
+    }   document.write("Tổng từ a đến b là: "+total);
 </script>
 </html>

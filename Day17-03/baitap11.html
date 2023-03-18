@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let listOfStar1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+  let listOfStar2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+  function checkOfStar(star) {
+      let indexOfStar = 0;
+      let result = "";
+      for (let i = 0; i < listOfStar1.length; i++) {
+          if(star === listOfStar1[i]) {
+              indexOfStar = i;
+             for (let j = 0; j < listOfStar2.length; j++) {
+                  if(indexOfStar === j) {
+                      result = listOfStar2[j];
+                      return result;
+                  }else {
+                      result = "Không tìm thấy chòm sao";
+                      return result;
+                  }
+              }
+          }else {
+              result = "Không tìm thấy ngôi sao";
+              return result;
+          }
+      }
+  }
+  let star = prompt("Nhập tên ngôi sao: ");
+  document.write(checkOfStar(star));
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm tính C,S hình tròn</title>
+</head>
+<body>
+<span id="result"></span>
+<span id="result1"></span>
+
+</body>
+<script>
+    function perimeterCircle(radius) {
+        return radius * 2 * 3.14;
+    }
+    function acreageCircle(radius) {
+        return radius * radius * 3.14;
+    }
+    let radius = prompt("nhập bán kính của hình tròn");
+    document.getElementById("result").innerHTML = "Chu vi hình tròn là: " + perimeterCircle(radius)+ "<br>";
+    document.getElementById("result1").innerHTML = "Diện tích hình tròn là: " + acreageCircle(radius);
+
+</script>
+</html>

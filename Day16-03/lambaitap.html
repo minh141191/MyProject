@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
 </body>
+<p id="result"></p>
+<p id="result2"></p>
+<script>
+    let arr = [5, 3, 8, 2, 7];
+    let maxOfIndex = 0;
+    let minOfIndex = 0;
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > arr[maxOfIndex]) {
+            maxOfIndex = i;
+        }
+        if (arr[i] < arr[minOfIndex]) {
+            minOfIndex = i;
+        }
+    }
+    let temp = arr[minOfIndex];
+    arr[minOfIndex] = arr[maxOfIndex];
+    arr[maxOfIndex] = temp;
+    console.log(arr);
+    //Note:chỉ tham khảo ,không nên dùng
+
+
+    // console.log(maxOfindex);
+    // console.log(minOfindex);
+</script>
 </html>

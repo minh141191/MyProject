@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<p id="result"></p>
+<p id="result1"></p>
+<p id="result2"></p>
+<script>
+    let arr = [];
+    let len = parseInt(prompt("nhập độ dài mảng"));
+    for (i = 0; i < len; i++) {
+        let newArr = prompt("nhập mảng" + i);
+        newArr = newArr.split(",");
+        arr.push(newArr);
+    }
+    console.log(arr);
+
+    let max = arr[0][0];
+    let min = arr[0][0];
+    for (let i = 0; i < arr.length; i++) {
+        let sum = 0;
+        for (let j = 0; j < arr[i].length; j++) {
+            sum += +arr[i][j];
+
+            if (arr[i][j] > max) {
+                max = arr[i][j];
+            }
+            if (arr[i][j] < min) {
+                min = arr[i][j];
+            }
+        }
+            console.log(sum);
+        }
+        document.getElementById("result").innerHTML = "max là: " + max;
+        document.getElementById("result1").innerHTML = "min là: " + min;
+
+</script>
 </body>
 </html>

@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+  let n = parseInt(prompt("nhap n"));
+  // let n = +prompt("nhập n");
+  let s = 0;
+  for (let i = 1; i <= 2*n;i++ ) {
+    s += i/(i+1);
+  }
+  document.write(s);
+</script>
 </body>
 </html>
+

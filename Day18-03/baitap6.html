@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check số nguyên dương</title>
+</head>
+<body>
+<script>
+    function checkInteger(number) {
+        if(number > 0 && number % 1 === 0) {
+            return number + " là số nguyên dương";
+        }
+        return number + " không phải là số nguyên dương";
+    }
+    let number = prompt("nhập số");
+    document.write(checkInteger(number));
+
+</script>
+</body>
+</html>

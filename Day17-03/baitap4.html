@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng các snt nhỏ hơn 500</title>
+</head>
+<body>
+<script>
+    let total = 0;
+    for (let i = 0; i < 500; i++) {
+        let snt = i;
+        for (let j = 2; j <= snt; j++) {
+            if (j === snt) {
+                total += snt;
+                break;
+            }
+            if (snt % j === 0) {
+                break;
+            }
+        }
+    }
+    document.write(total);
+</script>
+</body>
+</html>

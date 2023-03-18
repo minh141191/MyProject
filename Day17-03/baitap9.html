@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm tổng 2 tham số có điều kiện</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+  function sum(a, b) {
+    if(a > b) {
+      alert("bạn nhập sai");
+    }else
+      return a + b;
+  }
+  let numberA = parseInt(prompt("nhập tham số a"));
+  let numberB = parseInt(prompt("nhập tham số b"));
+  document.getElementById("result").innerHTML = sum(numberA,numberB);
+</script>
+</body>
+</html>
