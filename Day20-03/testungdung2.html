@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ung dung quan ly san pham</title>
+</head>
+<body>
+<h2 style="text-align: center">Quản Lý Học Viên</h2>
+<input id="demo" type="text" placeholder="Add Student">
+<button onclick="addStudent()">Add</button>
+<h3>List Studen</h3>
+<p id="list"></p>
+</body>
+<script>
+    class Student {
+        name;
+        age;
+        gender;
+
+        constructor(name, age, gender) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+        }
+        updateName(name) {
+            this.name = name;
+        }
+        updateAge(age) {
+            this.age = age;
+        }
+        updateGender(gender) {
+            this.gender = gender;
+        }
+    }
+
+    let student1 = new Student("Nguyen A", 23, "male");
+    let student2 = new Student("Nguyen B", 22, "male");
+    let student3 = new Student("Nguyen C", 21, "male");
+    let studentArr = [student1,student2,student3];
+    console.log(studentArr)
+
+    function disPlay() {
+        let data = "<table border='1'>"
+            data += "<tr>"
+            data += "<th>Name</th>"
+            data += "<th>Age</th>"
+            data += "<th>Gender</th>"
+            data += "<th colspan='2'>Action</th>"
+            data += "</tr>"
+
+        for (let i = 0; i < studentArr.length; i++) {
+            data += "<tr>"
+            data += "<td>" + studentArr[i].name +"</td>"
+            data += "<td>" + studentArr[i].age +"</td>"
+            data += "<td>" + studentArr[i].gender +"</td>"
+            data += "<td><button onclick='updateStudent(" + i +")'>Edit</button></td>"
+            data += "<td><button onclick='deleteStudent(" + i +")'>Delete</button></td>"
+            data += "</tr>"
+        }
+
+            data += "</table>"
+        document.getElementById('list').innerHTML = data;
+    }
+
+    disPlay()
+
+    function updateStudent(index) {
+        studentArr[index] = new Student(prompt("nhap ten"),prompt("nhap tuoi"),prompt("nhap gioi tinh"))
+        display();
+    }
+
+    function deleteStudent(index) {
+        if (confirm("Xóa?")) {
+            studentArr.splice(index, 1)
+            display();
+        }
+    }
+
+    function addStudent() {
+        let student4 = new Student(prompt("nhap ten"),prompt("nhap tuoi"),prompt("nhap gioi tinh"))
+        studentArr.push(student4);
+        display();
+    }
+
+
+</script>
+</html>

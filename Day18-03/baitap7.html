@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi chỗ</title>
+</head>
+<body>
+<span id="result"></span>
+<span id="result1"></span>
+<script>
+    function swap(arr) {
+        arr.reverse();
+        return arr;
+    }
+ let arr = prompt("");
+ arr = arr.split(",");
+    document.getElementById("result").innerHTML = arr + "<br>";
+    document.getElementById("result1").innerHTML = swap(arr);
+</script>
+</body>
+</html>

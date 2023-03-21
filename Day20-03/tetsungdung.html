@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quản lý spham</title>
+</head>
+<body>
+<h3>Add New Product</h3>
+<input id="nhap" type="text" placeholder="New Product">
+<button onclick="addProd()">Add</button>
+<h3>List Product</h3>
+<p id="show"></p>
+</body>
+<script>
+    let ip14 = ["Iphone14", 500, "USA"]
+    let ip15 = ["Iphone15", 600, "USA"]
+    let products = [ip14, ip15];
+
+    function display() {
+        let str = "<table border='1'>"
+            str += "<tr>"
+            str += "<th>Name</th>"
+            str += "<th>Price</th>"
+            str += "<th>From</th>"
+            str += "<th colspan='2'>Action</th>"
+            str += "</tr>"
+        for (let i = 0; i < products.length; i++) {
+            str += "<tr>";
+            for (let j = 0; j < products[i].length; j++) {
+                str += "<td>" + products[i][j] + "</td>";
+            }
+            str += "<td><button onclick='editProd(" + i + ")'>Sửa</button></td>"
+            str += "<td><button onclick='delProd(" + i + ")'>Xóa</button></td></tr>"
+
+        }
+        str += "</table>"
+        document.getElementById("show").innerHTML = str;
+    }
+
+    function inputInfo() {
+        let name = prompt("Nhập tên sản phẩm");
+        let price = prompt("Nhập giá sản phẩm");
+        let from = prompt("Nhập xuất xứ sản phẩm");
+        let newProd = [name, price, from];
+        return newProd;
+    }
+
+    function addProd() {
+        let newProd = document.getElementById("nhap").value.split(",");
+        products.push(newProd);
+        display();
+    }
+
+    function editProd(index) {
+        let newProd = inputInfo();
+        products.splice(index, 1, newProd);
+        display();
+    }
+
+    function delProd(index) {
+        if(confirm("ban chac chan muon xoa san pham: " + products[index] + "?"));
+        products.splice(index, 1);
+        display();
+
+    }
+
+    display(products);
+</script>
+</html>

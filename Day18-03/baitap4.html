@@ -7,12 +7,13 @@
 <body>
 <script>
     function numberCharacters(value) {
-        if (typeof value === 'number') {
+        if (typeof(value) === 'number') {
             return value + " là kí tự số";
         }
         return value + " không phải là kí tự số";
     }
-    document.write(numberCharacters(123));
+    // let a = prompt("")
+    document.write(numberCharacters(1,2));
 </script>
 </body>
 </html>

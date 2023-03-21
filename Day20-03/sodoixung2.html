@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiếm tra số đối xứng</title>
+</head>
+<body>
+<script>
+    function isPalindrome(str) {
+        let arr = str.split("");
+        console.log(arr);
+        let firstCharacter = arr[0];
+        let lastCharacter = arr[arr.length-1];
+        if(firstCharacter === lastCharacter) {
+            arr.shift();
+            arr.pop();
+            if(isEnd(arr)) {
+                return true;
+            }
+            else {
+                let newStr = arr.join("");
+                return isPalindrome(newStr);
+            }
+        }
+        return false;
+    }
+
+    function isEnd(arr) {
+        return arr.length === 0 || arr.length === 1;
+    }
+
+    let valu = prompt("nhập từ cần kiểm tra");
+    console.log(isPalindrome(valu));
+</script>
+</body>
+</html>

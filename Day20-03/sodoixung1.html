@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số đối xứng</title>
+</head>
+<body>
+<script>
+  function reverse_num(n) {
+    n = n.toString();
+    return n.split("").reverse().join("");
+  }
+
+  function symmectrical_num(n) {
+    let flag = 0;
+    if(reverse_num(n) === n) flag = 1;
+    return flag;
+  }
+
+  let n = prompt("nhập số tự nhiên");
+  let check = symmectrical_num(n);
+  if (check === 1) {
+    console.log(n + "là số đối xứng");
+  } else
+    console.log(n + "không phải là số đối xứng");
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi chữ thường thành chữ hoa</title>
+</head>
+<body>
+<script>
+    let a = "Doi Chu Thuong Thanh Chu Hoa";
+    let str = "";
+    for (let i of a.split("")) {
+        let substr = "";
+        for (let j in i) {
+            if (j === 0) {
+                substr += i[j].toLowerCase();
+            } else {
+                substr += i[j].toUpperCase();
+            }
+        }
+        str += substr + "";
+    }
+    console.log(str);
+</script>
+</body>
+</html>

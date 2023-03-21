@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check kí tự nằm trong mảng</title>
+</head>
+<body>
+<span id="result"></span>
+</body>
+<script>
+    function swap(arr, value) {
+        // 1. dem so lan xuat hien cua value trong mang array
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if(value === arr[i]) {
+                count++
+            }
+        }
+
+        // 2. check so lan xuat hien của value trong mang array
+        if (count > 0) {
+            return count;
+        }
+        return -1;
+    }
+
+    let arrInput = ["a", "b", "w", "w"];
+    let abc = prompt("");
+    document.getElementById("result").innerHTML = swap(arrInput, abc);
+
+
+</script>
+</html>
