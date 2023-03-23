@@ -1,14 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        td {
+            text-align: center;
+        }
+    </style>
 
 </head>
 <body>
 <h2>Quản Lý Học Sinh</h2>
-<input id="demo" type="text" placeholder="Add Student">
-<button onclick="addStudent()">Add</button>
+<input id="student" type="text" placeholder="Add Student">
+<button onclick="addStudent()" style="width: 60px;  ">Add</button><br><br>
+<input id="name" type="text" placeholder="Add Name"><br><br>
+<input id="age" type="number" placeholder="Add Age"><br><br>
+<select id="gender">
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+</select><br><br>
+<button onclick="updateStudent()" style="width: 60px;">Update</button>
 <h3>List Student</h3>
 <p id="list"></p>
 </body>

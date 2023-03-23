@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang Đăng Nhập</title>
+    <style>
+        fieldset {
+            width: 350px;
+            margin-left: 500px;
+        }
+
+        div {
+            text-align: center;
+        }
+
+    </style>
+
+
+</head>
+<body>
+<div id="formLogin">
+    <form>
+        <fieldset>
+            <h2>Đăng Nhập</h2>
+            User Name:<input id="username" type="text" placeholder="username"><br><br>
+            Pass Word:<input id="password" type="password" placeholder="password"><br><br>
+            <button onclick="loginAccount()">Đăng Nhập</button>
+            <br>
+            Bạn đã có tài khoản chưa?<a href="#" onclick="showFormRegister()">Đăng Ký</a>
+        </fieldset>
+    </form>
+</div>
+
+<div id="formRegister" style="display: none">
+    <form>
+        <fieldset>
+            <h2>Đăng Ký</h2>
+            <input type="text" placeholder="id"><br><br>
+            <input id="newName" type="text" placeholder="Username"><br><br>
+            <input id="newPassword" type="text" placeholder="Password"><br><br>
+            <input type="text" placeholder="Email"><br><br>
+            <input type="text" placeholder="Số Điện Thoại"><br><br><br>
+            <button onclick="register()">Đăng Ký</button>
+        </fieldset>
+    </form>
+</div>
+</body>
+<script src="trangdangnhap.js"></script>
+</html>
