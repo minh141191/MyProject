@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang Đăng Nhập</title>
+    <link rel="stylesheet" href="quanlytruyen.css">
+</head>
+<body>
+<div>
+    <a style="margin-left: 50px;" href="#" onclick="showHome();">Truyện Tranh</a>
+    <input id="search" type="text" placeholder="Tên Truyện" style="width: 200px;">
+    <button onclick="searchStory()">Tìm kiếm</button>
+    <button onclick="showFormLogin()">Đăng Nhập</button>
+</div>
+
+<div id="home" class="container" style="display: block">
+    <div id="showstory" class='grid-stories'></div>
+</div>
+<div id="mystories" class="stories" style="display: none">
+    <button class="btn-add" onclick="showEdit();">Thêm mới truyện</button>
+    <div id="listsotory"></div>
+</div>
+
+<div class="information" id="action" style="display: none">
+
+    <table class="table-form">
+        <tr>
+            <td></td>
+            <td><button style="float: right">x</button></td>
+        </tr>
+        <tr>
+            <th colspan="2" style="font-size: 20px">Thông tin truyện</th>
+        </tr>
+        <tr>
+            <th>ID</th>
+            <td><input type="number" id="id"></td>
+        </tr>
+        <tr>
+            <th>Ảnh</th>
+            <td><input type="text" id="img"></td>
+        </tr>
+            <th>Tên Truyện</th>
+            <td><input type="text" id="name"></td>
+        <tr>
+            <th></th>
+            <td>
+                <button id="add" onclick="addStory()">Add</button>
+                <button id="update" onclick="updateStory()">Update</button>
+            </td>
+
+        </tr>
+    </table>
+
+</div>
+
+<div id="formLogin" style="display: none">
+    <fieldset>
+        <h2>Đăng Nhập</h2>
+        User Name:<input id="username" type="text" placeholder="username"><br><br>
+        Pass Word :<input id="password" type="password" placeholder="password"><br><br>
+        <span id="result"></span><br><br>
+        <button onclick="loginAccount()">Đăng Nhập</button>
+        <br>
+        Bạn đã có tài khoản chưa?<a href="#" onclick="showFormRegister()">Đăng Ký</a>
+    </fieldset>
+</div>
+
+<div id="formRegister" style="display: none">
+    <fieldset>
+        <h2>Đăng Ký</h2>
+        <input type="email" placeholder="Email"><br><br>
+        <input id="newName" type="text" placeholder="Userame"><br><br>
+        <input id="newPassword" type="text" placeholder="Password"><br><br>
+        <span id="result1"></span><br>
+        <button onclick="register()">Đăng Ký</button>
+        <br>
+        <span>Bạn đã có tài khoản?</span>
+        <a href="#" onclick="showFormLogin()">Đăng Nhập</a>
+    </fieldset>
+</div>
+
+</body>
+<script src="trangchutruyen.js"></script>
+<script src="trangdangnhap.js"></script>
+</html>

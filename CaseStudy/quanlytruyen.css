@@ -1,0 +1,77 @@
+fieldset {
+    width: 370px;
+    height: 250px;
+    margin: 20px auto;
+}
+div {
+    text-align: center;
+}
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: auto;
+    display: flex;
+}
+.grid-stories {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+}
+.story-grid {
+    width: 172px;
+    margin-bottom: 20px;
+}
+.story-grid .info {
+    padding: 8px;
+    text-align: center;
+}
+.story-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+.story-list {
+    width: 100px;
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.stories {
+    width: 100%;
+    max-width: 960px;
+    margin: 20px auto;
+}
+.table-grid {
+    width: 100%;
+    text-align:center;
+    border: 1px solid black;
+}
+.information {
+    width: 100%;
+    max-width: 660px;
+    margin: 20px auto;
+}
+.btn-edit {
+    margin-right: 10px;
+}
+.btn-add {
+    margin: 15px 20px 15px auto;
+    float: right;
+    width: 120px;
+    height: 40px;
+    background-color: palegoldenrod;
+    cursor: pointer;
+}
+.table-form {
+    width: 100%;
+    border: 1px solid lightslategrey;
+}
+.table-form tbody tr {
+    border: 1px solid lightslategrey;
+}
