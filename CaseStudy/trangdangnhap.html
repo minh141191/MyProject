@@ -6,12 +6,19 @@
     <link rel="stylesheet" href="quanlytruyen.css">
 </head>
 <body>
-<div>
-    <a style="margin-left: 50px;" href="#" onclick="showHome();">Truyện Tranh</a>
-    <input id="search" type="text" placeholder="Tên Truyện" style="width: 200px;">
-    <button onclick="searchStory()">Tìm kiếm</button>
-    <button onclick="showFormLogin()">Đăng Nhập</button>
+
+<header id="main-header">
+<div class="theme">
+    <ul>
+    <li class="hide" id="story-manager"><a href="#" onclick="showListStory();">Quản Lý Truyện</a></li>
+    <li><a href="#" onclick="showHome();">Trang Chủ</a></li>
+    <li><input class="in-search" id="search" type="text" placeholder="Tên Truyện"></li>
+    <li><button onclick="searchStory();">Tìm kiếm</button></li>
+    <li id="longin"><button onclick="showFormLogin();">Đăng Nhập</button></li>
+    <li id="out" class="hide"><button onclick="logOut();">Đăng Xuất</button></li>
+    </ul>
 </div>
+</header>
 
 <div id="home" class="container" style="display: block">
     <div id="showstory" class='grid-stories'></div>
@@ -26,26 +33,28 @@
     <table class="table-form">
         <tr>
             <td></td>
-            <td><button style="float: right">x</button></td>
+            <td><button style="float: right" onclick="hidenInformation();">x</button></td>
         </tr>
         <tr>
             <th colspan="2" style="font-size: 20px">Thông tin truyện</th>
         </tr>
         <tr>
-            <th>ID</th>
-            <td><input type="number" id="id"></td>
-        </tr>
-        <tr>
             <th>Ảnh</th>
             <td><input type="text" id="img"></td>
         </tr>
+        <tr>
             <th>Tên Truyện</th>
             <td><input type="text" id="name"></td>
+        </tr>
         <tr>
-            <th></th>
+            <th>Tác Giả</th>
+            <td><input type="text" id="author"></td>
+        </tr>
+        <tr>
+            <th>Tùy Chọn</th>
             <td>
-                <button id="add" onclick="addStory()">Add</button>
-                <button id="update" onclick="updateStory()">Update</button>
+                <button id="add" onclick="addStory()">Thêm Truyện</button>
+                <button id="update" onclick="updateStory()">Cập Nhật</button>
             </td>
 
         </tr>
@@ -56,8 +65,8 @@
 <div id="formLogin" style="display: none">
     <fieldset>
         <h2>Đăng Nhập</h2>
-        User Name:<input id="username" type="text" placeholder="username"><br><br>
-        Pass Word :<input id="password" type="password" placeholder="password"><br><br>
+        <input id="username" type="text" placeholder="Tên Đăng Nhập"><br><br>
+        <input id="password" type="password" placeholder="Mật Khẩu"><br><br>
         <span id="result"></span><br><br>
         <button onclick="loginAccount()">Đăng Nhập</button>
         <br>
@@ -68,9 +77,8 @@
 <div id="formRegister" style="display: none">
     <fieldset>
         <h2>Đăng Ký</h2>
-        <input type="email" placeholder="Email"><br><br>
-        <input id="newName" type="text" placeholder="Userame"><br><br>
-        <input id="newPassword" type="text" placeholder="Password"><br><br>
+        <input id="newName" type="text" placeholder="Tên Đăn Nhập"><br><br>
+        <input id="newPassword" type="text" placeholder="Mật Khẩu"><br><br>
         <span id="result1"></span><br>
         <button onclick="register()">Đăng Ký</button>
         <br>
