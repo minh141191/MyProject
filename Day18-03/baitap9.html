@@ -40,6 +40,27 @@
         document.getElementById("dsach").innerHTML = hienThi(matHang);
     }
     document.getElementById("dsach").innerHTML = hienThi(matHang);
+
+    function timeConversion(s) {
+        // Write your code here
+        let hours = Number(s.substring(0, 2));
+        let timeResult = '';
+        if (s.includes('AM')) {
+            if (hours === 12) {
+                timeResult = '00' + s.substring(2, 8);
+            } else {
+                timeResult = s.substring(0, 8);
+            }
+        } else {
+            if (hours === 12) {
+                timeResult = s.substring(0, 8);
+            } else {
+                timeResult = hours + 12 + s.substring(2, 8);
+            }
+        }
+        return timeResult;
+    }
+    console.log('timeconvert', timeConversion('12:01:45PM'));
 </script>
 </body>
 </html>

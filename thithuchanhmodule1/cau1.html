@@ -5,6 +5,23 @@
     <title>Title</title>
 </head>
 <body>
-let listPo
+<script>
+
+    function checkPoint(point) {
+        let temp;
+        for (let i = 0; i < point.length; i++) {
+            for (let j = i + 1; j < point.length; j++) {
+                if (point[i] < point[j]) {
+                    temp = point[i];
+                    point[i] = point[j];
+                    point[j] = temp;
+                }
+            }
+        }
+        return point[2];
+    }
+
+    alert(checkPoint([2, 3, 6, 7, 9, 1]));
+</script>
 </body>
 </html>
